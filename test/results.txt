@@ -1,0 +1,28 @@
+$ npm test
+
+> sm-test@1.0.0 test /Users/---/Dev/SM1
+> mocha --reporter spec --timeout 10000
+
+
+
+  Send mail
+    send to single to no cc and bcc
+      ✓ success - 100 (1389ms)
+    No valid email id
+      ✓ failure - 101
+    send to, cc, bcc
+      ✓ success - 102 (1951ms)
+    send with no text and subject
+      ✓ success - 103 (1980ms)
+    send to multiple recipients in TO
+      ✓ success - 104 (2068ms)
+    send to empty CC BCC SUBJECT and TEXT
+      ✓ success - 105 (1049ms)
+    send empty TO CC BCC SUBJECT and TEXT
+      ✓ failure - 106
+    send to CC with SUBJECT and TEXT
+      ✓ failure - 106
+
+
+  8 passing (8s)
+
