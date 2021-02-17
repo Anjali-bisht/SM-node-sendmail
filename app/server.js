@@ -1,6 +1,8 @@
 const express = require('express');
 const mailcode = require("./mailcode");
 const bodyParser = require('body-parser');
+require('dotenv').config();
+
 
 const app = express();
 

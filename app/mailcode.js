@@ -2,12 +2,13 @@ const mailgun = require("mailgun-js");
 const validator = require("email-validator");
 const sgMail = require('@sendgrid/mail');
 
-//set domain and api for mailgun
-const mg_DOMAIN = 'sandboxb843d388466a4098b8701b8637d9455a.mailgun.org';
-const mg = mailgun({ apiKey: 'aef9bbddcb8db1db600410e37b89014c-4de08e90-caddef97', domain: mg_DOMAIN });
-sgMail.setApiKey('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');
 
 exports.sendmail = async function (req, res) {
+
+    //set domain and api for mailgun
+    const mg_DOMAIN = 'sandboxb843d388466a4098b8701b8637d9455a.mailgun.org';
+    const mg = mailgun({ apiKey: process.env.mgAPIkey, domain: mg_DOMAIN });
+    sgMail.setApiKey(process.env.sgAPIkey);
 
     //initialise arrays
     var arr_TO = [];
